@@ -5,11 +5,11 @@ const Banner = () => {
     return (
         <div
             style={{ backgroundImage: `url(${bgPic})` }}
-            className=" bg-fixed bg-no-repeat bg-cover h-screen py-10 flex justify-center items-center"
+            className=" md:bg-fixed  bg-no-repeat bg-cover md:h-screen h-fit py-10 flex justify-center items-center"
         >
             <div>
-                <h1 className="text-9xl text-primary font-bold pt-5">Save The Life</h1>
-                <h2 className="text-5xl text-white font-bold pt-5">
+                <h1 className="md:text-9xl text-5xl text-primary font-bold pt-5">Save The Life</h1>
+                <h2 className="md:text-5xl text-3xl text-white font-bold pt-5">
                     Help people for their needs all over the Bangladesh
                 </h2>
                 <button
