@@ -52,7 +52,7 @@ const WelcomeCarousel = () => {
                     </Carousel>
                 </div>
             </div>
-            <div className=" bg-primary">
+            <div className=" bg-red-600">
                 <div className="flex md:flex-row flex-col gap-5 justify-around items-center my-10 py-10 container mx-auto">
                     <div>
                         <h1 className="text-white text-3xl font-bold font-rs">

@@ -1,4 +1,5 @@
 import React from "react";
+import CountUp from 'react-countup';
 
 const NeedHelp = () => {
     return (
@@ -47,7 +48,7 @@ const NeedHelp = () => {
                                         type="text"
                                         name="subject"
                                         id="subject"
-                                        placeholder="Enter your details"
+                                        placeholder="Enter your subject"
                                         class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium  outline-none focus:border-primary "
                                     />
                                 </div>
@@ -71,11 +72,24 @@ const NeedHelp = () => {
                     </div>
                 </div>
             </div>
-            <div className=" bg-primary">
-                <div className="flex md:flex-row flex-row gap-5 justify-around items-center my-10 py-10 container mx-auto">
-                    <div></div>
-                    <div></div>
-                    <div></div>
+            <div className=" bg-red-600">
+                <div className="flex md:flex-row flex-col gap-10 justify-around items-center my-10 p-10 container mx-auto">
+                    <div className="text-white font-bold">
+                        <h1 className="text-5xl"><i class="fa-solid fa-heart"></i></h1>
+                        <h1 className="text-5xl"><CountUp end={150} duration={10} />+</h1>
+                        <h2 className="md:text-start">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit nobis facere, modi quia iusto necessitatibus!</h2>
+                    </div>
+                    <div className="text-white font-bold">
+                        <h1 className="text-5xl"><i class="fa-sharp fa-solid fa-user-group"></i></h1>
+                        <h1 className="text-5xl"><CountUp end={130} duration={10} />+</h1>
+                        <h2 className="md:text-start">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit nobis facere, modi quia iusto necessitatibus!</h2>
+                    </div>
+                    <div className="text-white font-bold">
+                        <h1 className="text-5xl"><i class="fa-solid fa-house-user"></i></h1>
+                        <h1 className="text-5xl"><CountUp end={170} duration={10} />+</h1>
+                        <h2 className="md:text-start">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit nobis facere, modi quia iusto necessitatibus!</h2>
+                    </div>
+
                 </div>
             </div>
         </div>
