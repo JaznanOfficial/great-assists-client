@@ -9,6 +9,10 @@ a{
   margin: 0 !important;
 }
 
+h1{
+  font-family:"'Roboto Slab', 'serif'";
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;

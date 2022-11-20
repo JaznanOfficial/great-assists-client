@@ -1,6 +1,7 @@
 import React from "react";
 import Banner from "../Components/HomePage/Banner";
 import Navigation from "../Components/HomePage/Navigation";
+import NeedHelp from "../Components/HomePage/NeedHelp";
 import WelcomeCarousel from "../Components/HomePage/WelcomeCarousel";
 
 const HomePage = () => {
@@ -9,6 +10,7 @@ const HomePage = () => {
             <Navigation />
             <Banner />
             <WelcomeCarousel />
+            <NeedHelp />
         </div>
     );
 };

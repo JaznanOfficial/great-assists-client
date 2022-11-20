@@ -7,7 +7,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        "primary":"#C10000",
+        "primary": "#C10000",
+        "slate-white":"#F6F6F6"
       },
       fontFamily: {
         "rs": ['Roboto Slab', 'serif'],
