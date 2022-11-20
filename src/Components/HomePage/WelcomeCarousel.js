@@ -16,7 +16,7 @@ const WelcomeCarousel = () => {
                         </span>
                     </h1>
                     <hr className="w-1/12 mx-auto border-2 border-primary" />
-                    <div className="container mx-auto">
+                    <div className="md:w-2/3 mx-auto">
                         <p className="my-5">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis
                             placeat dolores quas esse, saepe reprehenderit aliquam ad ipsam
