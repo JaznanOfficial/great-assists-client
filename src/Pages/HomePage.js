@@ -2,6 +2,7 @@ import React from "react";
 import Banner from "../Components/HomePage/Banner";
 import Navigation from "../Components/HomePage/Navigation";
 import NeedHelp from "../Components/HomePage/NeedHelp";
+import VolunteerSection from "../Components/HomePage/VolunteerSection";
 import WelcomeCarousel from "../Components/HomePage/WelcomeCarousel";
 
 const HomePage = () => {
@@ -11,6 +12,7 @@ const HomePage = () => {
             <Banner />
             <WelcomeCarousel />
             <NeedHelp />
+            <VolunteerSection/>
         </div>
     );
 };
