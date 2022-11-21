@@ -1,143 +1,126 @@
 import React from "react";
 
 const ContactPage = () => {
+    const bgImage = 'https://images.unsplash.com/photo-1563986768609-322da13575f3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80'
     return (
-        <div class="relative flex items-top justify-center bg-white dark:bg-gray-900 sm:items-center sm:pt-0">
-            <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
-                <div class="my-8 overflow-hidden">
-                    <div class="grid grid-cols-1 md:grid-cols-2">
-                        <div class="p-6 mr-2 bg-gray-100 dark:bg-gray-800 sm:rounded-lg">
-                            <h1 class="text-4xl sm:text-5xl text-red-500 dark:text-white font-extrabold tracking-tight">
-                                Get in touch
+        <section
+            class="min-h-screen bg-cover "
+            style={{ backgroundImage:`url(${bgImage})`}}
+        >
+            <div class="flex flex-col min-h-screen bg-black/60">
+                <div class="container flex flex-col flex-1 px-6 py-12 mx-auto">
+                    <div class="flex-1 lg:flex lg:items-center lg:-mx-6">
+                        <div class="text-white lg:w-1/2 lg:mx-6">
+                            <h1 class="text-3xl font-semibold capitalize lg:text-5xl">
+                                Ultimate design solution
                             </h1>
-                            <p class="text-normal text-lg sm:text-2xl font-medium text-gray-600 dark:text-gray-400 mt-2">
-                                Fill in the form to start a conversation
+
+                            <p class="max-w-xl mt-6">
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem
+                                quo aliquid molestiae hic incidunt beatae placeat accusantium! Alias
+                                ex quisquam ab tempora. Ratione autem doloremque ducimus numquam
+                                doloribus, error sed.
                             </p>
 
-                            <div class="flex items-center mt-8 text-gray-600 dark:text-gray-400">
-                                <svg
-                                    fill="none"
-                                    stroke="currentColor"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="1.5"
-                                    viewBox="0 0 24 24"
-                                    class="w-8 h-8 text-gray-500"
-                                >
-                                    <path
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        stroke-width="1.5"
-                                        d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
-                                    />
-                                    <path
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        stroke-width="1.5"
-                                        d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
-                                    />
-                                </svg>
-                                <div class="ml-4 text-md tracking-wide font-semibold w-40">
-                                    Acme Inc, Street, State, Postal Code
-                                </div>
-                            </div>
+                            <button class="px-8 py-3 mt-6 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-red-600 rounded-md hover:bg-red-500 focus:outline-none focus:ring focus:ring-red-400 focus:ring-opacity-50">
+                                get in touch
+                            </button>
 
-                            <div class="flex items-center mt-4 text-gray-600 dark:text-gray-400">
-                                <svg
-                                    fill="none"
-                                    stroke="currentColor"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="1.5"
-                                    viewBox="0 0 24 24"
-                                    class="w-8 h-8 text-gray-500"
-                                >
-                                    <path
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        stroke-width="1.5"
-                                        d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
-                                    />
-                                </svg>
-                                <div class="ml-4 text-md tracking-wide font-semibold w-40">
-                                    +44 1234567890
-                                </div>
-                            </div>
+                            <div class="mt-6 md:mt-8">
+                                <h3 class="text-sky-300 ">Follow us</h3>
 
-                            <div class="flex items-center mt-2 text-gray-600 dark:text-gray-400">
-                                <svg
-                                    fill="none"
-                                    stroke="currentColor"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="1.5"
-                                    viewBox="0 0 24 24"
-                                    class="w-8 h-8 text-gray-500"
-                                >
-                                    <path
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        stroke-width="1.5"
-                                        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                                    />
-                                </svg>
-                                <div class="ml-4 text-md tracking-wide font-semibold w-40">
-                                    info@acme.org
-                                </div>
+                                <div class="flex justify-center mt-8 space-x-6 ">
+                            <a
+                                class="hover:opacity-70 mx-4 text-sky-600"
+                                href="www.facebook.com"
+                                target="_blank"
+                            >
+                                <span class="sr-only"> Facebook </span>
+                                <i class="fa-brands fa-facebook text-3xl mx-1"></i>
+                            </a>
+                            <a
+                                class="hover:opacity-70 mx-4 text-sky-800"
+                                href="www.facebook.com"
+                                target="_blank"
+                            >
+                                <span class="sr-only"> LinkedIn </span>
+                                <i class="fa-brands fa-linkedin text-3xl mx-1"></i>
+                            </a>
+                            <a
+                                class="hover:opacity-70 mx-4 text-black"
+                                href="www.facebook.com"
+                                target="_blank"
+                            >
+                                <span class="sr-only"> Github </span>
+                                <i class="fa-brands fa-github text-3xl mx-1"></i>
+                            </a>
+                            <a
+                                class="hover:opacity-70 mx-4 text-cyan-600"
+                                href="www.facebook.com"
+                                target="_blank"
+                            >
+                                <span class="sr-only"> Twitter </span>
+                                <i class="fa-brands fa-twitter text-3xl mx-1"></i>
+                            </a>
+                            <a
+                                class="hover:opacity-70 mx-4 text-pink-600"
+                                href="www.facebook.com"
+                                target="_blank"
+                            >
+                                <span class="sr-only"> Instagram </span>
+                                <i class="fa-brands fa-instagram text-3xl mx-1"></i>
+                            </a>
+                        </div>
                             </div>
                         </div>
 
-                        <form class="p-6 flex flex-col justify-center">
-                            <div class="flex flex-col">
-                                <label for="name" class="hidden">
-                                    Full Name
-                                </label>
-                                <input
-                                    type="name"
-                                    name="name"
-                                    id="name"
-                                    placeholder="Full Name"
-                                    class="w-100 mt-2 py-3 px-3 rounded-lg bg-white dark:bg-gray-800 border border-gray-400 dark:border-gray-700 text-gray-800 font-semibold focus:border-red-500 focus:outline-none"
-                                />
-                            </div>
+                        <div class="mt-8 lg:w-1/2 lg:mx-6">
+                            <div class="w-full px-8 py-10 mx-auto overflow-hidden bg-white shadow-2xl rounded-xl dark:bg-gray-900 lg:max-w-xl">
+                                <h1 class="text-2xl font-medium text-red-600 dark:text-gray-200">
+                                    Contact form
+                                </h1>
 
-                            <div class="flex flex-col mt-2">
-                                <label for="email" class="hidden">
-                                    Email
-                                </label>
-                                <input
-                                    type="email"
-                                    name="email"
-                                    id="email"
-                                    placeholder="Email"
-                                    class="w-100 mt-2 py-3 px-3 rounded-lg bg-white dark:bg-gray-800 border border-gray-400 dark:border-gray-700 text-gray-800 font-semibold focus:border-red-500 focus:outline-none"
-                                />
-                            </div>
+                                <p class="mt-4 text-gray-500 dark:text-gray-400">
+                                    Ask us everything and we would love to hear from you
+                                </p>
 
-                            <div class="flex flex-col mt-2">
-                                <label for="tel" class="hidden">
-                                    Number
-                                </label>
-                                <input
-                                    type="tel"
-                                    name="tel"
-                                    id="tel"
-                                    placeholder="Phone Number"
-                                    class="w-100 mt-2 py-3 px-3 rounded-lg bg-white dark:bg-gray-800 border border-gray-400 dark:border-gray-700 text-gray-800 font-semibold focus:border-red-500 focus:outline-none"
-                                />
-                            </div>
+                                <form class="mt-6">
+                                    <div class="flex-1">
+                                        
+                                        <input
+                                            type="text"
+                                            placeholder="John Doe"
+                                            class="block w-full px-5 py-3 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-red-400 focus:ring-red-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
+                                        />
+                                    </div>
 
-                            <button
-                                type="submit"
-                                class="md:w-32 bg-red-600 hover:bg-blue-dark text-white font-bold py-3 px-6 rounded-lg mt-3 hover:bg-red-500 transition ease-in-out duration-300"
-                            >
-                                Submit
-                            </button>
-                        </form>
+                                    <div class="flex-1 mt-6">
+                                        
+                                        <input
+                                            type="email"
+                                            placeholder="johndoe@example.com"
+                                            class="block w-full px-5 py-3 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-red-400 focus:ring-red-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
+                                        />
+                                    </div>
+
+                                    <div class="w-full mt-6">
+                                        
+                                        <textarea
+                                            class="block w-full h-32 px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md md:h-48 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-red-400 focus:ring-red-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
+                                            placeholder="Message"
+                                        ></textarea>
+                                    </div>
+
+                                    <button class="w-full px-6 py-3 mt-6 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-red-600 rounded-md hover:bg-red-500 focus:outline-none focus:ring focus:ring-red-400 focus:ring-opacity-50">
+                                        get in touch
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     );
 };
 

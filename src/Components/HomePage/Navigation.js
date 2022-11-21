@@ -40,6 +40,22 @@ const Navigation = () => {
                     >
                         Contact
                     </NavLink>
+                    <NavLink
+                        to="/gallery"
+                        className={
+                            "border-b-2 border-white hover:border-b-primary focus:border-b-2 focus:border-b-primary p-3 text-xl font-bold"
+                        }
+                    >
+                        Gallery
+                    </NavLink>
+                    <NavLink
+                        to="/admin"
+                        className={
+                            "border-b-2 border-white hover:border-b-primary focus:border-b-2 focus:border-b-primary p-3 text-xl font-bold"
+                        }
+                    >
+                        Admin
+                    </NavLink>
                     <button
                         to="/sing-in"
                         className={
