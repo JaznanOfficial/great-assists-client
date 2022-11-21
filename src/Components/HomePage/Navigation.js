@@ -7,8 +7,8 @@ const Navigation = () => {
     return (
         <div className="shadow-md">
             <Navbar fluid={true} rounded={true} className="container mx-auto ">
-                <Navbar.Brand href="https://flowbite.com/">
-                    <img src={assist} className="mr-3 h-20 sm:h-20" alt="Flowbite Logo" />
+                <Navbar.Brand href="/">
+                    <img src={assist} className="mr-3 h-20 sm:h-20" alt="Site Logo" />
                     <span className="self-center whitespace-nowrap text-3xl font-semibold font-rs">
                         <span className="text-primary">Great</span>
                         <span>Assists</span>
