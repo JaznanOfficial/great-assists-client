@@ -8,6 +8,7 @@ import ContactPage from "./Pages/ContactPage";
 import GalleryPage from "./Pages/GalleryPage";
 import AdminPage from "./Pages/AdminPage";
 import NotFoundPage from "./Pages/NotFoundPage";
+import Footer from "./Components/HomePage/Footer";
 
 function App() {
     return (
@@ -27,7 +28,7 @@ function App() {
                 <Route path="/admin" element={<AdminPage />}></Route>
                 <Route path="*" element={<NotFoundPage />}></Route>
             </Routes>
-            
+            <Footer/>
         </div>
     );
 }
