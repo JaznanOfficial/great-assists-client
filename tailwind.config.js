@@ -12,7 +12,8 @@ module.exports = {
       },
       fontFamily: {
         "rs": ['Roboto Slab', 'serif'],
-        "open":['Open Sans', 'sans-serif']
+        "open": ['Open Sans', 'sans-serif'],
+        "monoton":['Monoton', 'cursive']
       }
     },
   },
