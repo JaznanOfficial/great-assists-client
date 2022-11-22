@@ -2,8 +2,20 @@ import { Button, Navbar } from "flowbite-react";
 import React from "react";
 import assist from "./assist.png";
 import { NavLink } from "react-router-dom";
+import useFirebase from "../../Hooks/useFirebase";
 
 const Navigation = () => {
+    const { signInWithGoogle, user, logOut } = useFirebase();
+
+    console.log(user);
+
+    const signIn = () => {
+        signInWithGoogle();
+    };
+    const signOut = () => {
+        logOut();
+    };
+
     return (
         <div className="shadow-md">
             <Navbar fluid={true} rounded={true} className="container mx-auto ">
@@ -56,16 +68,44 @@ const Navigation = () => {
                     >
                         Admin
                     </NavLink>
-                    <button
-                        to="/sing-in"
-                        className={
-                            "rounded-lg text-white bg-primary ml-3 p-3 text-xl font-bold"
-                        }
-                    >
-                        Sign In
-                    </button>
+                    {user.auth && (
+                        <div class="flex justify-center items-center space-x-4">
+                            {/* <img
+                            class="w-10 h-10 rounded-full"
+                            src="https://flowbite.com/docs/images/people/profile-picture-5.jpg"
+                            alt="Rounded avatar"
+                        /> */}
+                            <img
+                                class="w-10 h-10 rounded"
+                                src={user?.photoURL}
+                                alt="Default avatar"
+                            />
+                        </div>
+                    )}
 
-                    
+                    {!user?.auth && (
+                        <button
+                            onClick={signIn}
+                            to="/sing-in"
+                            className={
+                                "rounded-lg text-white bg-primary my-3 md:my-0 ml-3 p-3 text-xl font-bold"
+                            }
+                        >
+                            Sign In
+                        </button>
+                    )}
+
+                    {user?.auth && (
+                        <button
+                            onClick={signOut}
+                            to="/sing-in"
+                            className={
+                                "rounded-lg text-white bg-primary my-3 md:my-0 ml-3 p-3 text-xl font-bold"
+                            }
+                        >
+                            Sign Out
+                        </button>
+                    )}
                 </Navbar.Collapse>
             </Navbar>
         </div>

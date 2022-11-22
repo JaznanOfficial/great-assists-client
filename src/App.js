@@ -9,6 +9,7 @@ import GalleryPage from "./Pages/GalleryPage";
 import AdminPage from "./Pages/AdminPage";
 import NotFoundPage from "./Pages/NotFoundPage";
 import Footer from "./Components/HomePage/Footer";
+import MessengerCustomerChat from "react-messenger-customer-chat";
 
 function App() {
     return (
@@ -19,6 +20,7 @@ function App() {
                 viewBox="0 0 150 250"
                 style={{ borderRadius: "20%", right: 30, bottom: 100 }}
             />
+            <MessengerCustomerChat pageId="<PAGE_ID>" appId="<APP_ID>" />,
             <Navigation />
             <Routes>
                 <Route path="/" element={<HomePage />}></Route>
@@ -28,7 +30,7 @@ function App() {
                 <Route path="/admin" element={<AdminPage />}></Route>
                 <Route path="*" element={<NotFoundPage />}></Route>
             </Routes>
-            <Footer/>
+            <Footer />
         </div>
     );
 }
