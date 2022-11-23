@@ -1,7 +1,25 @@
-import React from "react";
+import React, { useRef } from "react";
 import CountUp from 'react-countup';
+import emailjs from '@emailjs/browser';
 
 const NeedHelp = () => {
+
+    const form = useRef()
+
+    const sendEmail = (e) => {
+        e.preventDefault();
+        
+        console.log(form);
+    
+        emailjs.sendForm('service_xahqw4n', 'template_elkp9tb', form.current, 'user_1WP45SDevcirhN4i48N1M')
+          .then((result) => {
+              console.log(result.text);
+          }, (error) => {
+              console.log(error.text);
+          });
+      };
+
+
     return (
         <div className="bg-slate-white py-14">
             <div className="flex md:flex-row flex-col justify-around items-start">
@@ -20,54 +38,48 @@ const NeedHelp = () => {
                     </div>
                     <div class="flex items-center justify-center">
                         <div class="mx-auto w-full max-w-[550px] px-3">
-                            <form action="https://formbold.com/s/FORM_ID" method="POST">
-                                <div class="my-5">
-                                    
-                                    <input
-                                        type="text"
-                                        name="name"
-                                        id="name"
-                                        placeholder="Full Name"
-                                        class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium  outline-none focus:border-primary "
-                                    />
-                                </div>
-                                <div class="mb-5">
-                                    
-                                       
-                                    <input
-                                        type="email"
-                                        name="email"
-                                        id="email"
-                                        placeholder="example@domain.com"
-                                        class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium  outline-none focus:border-primary "
-                                    />
-                                </div>
-                                <div class="mb-5">
-                                    
-                                    <input
-                                        type="text"
-                                        name="subject"
-                                        id="subject"
-                                        placeholder="Enter your subject"
-                                        class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium  outline-none focus:border-primary "
-                                    />
-                                </div>
-                                <div class="mb-5">
-                                    
-                                    <textarea
-                                        rows="4"
-                                        name="message"
-                                        id="message"
-                                        placeholder="Type your message"
-                                        class="w-full  rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium  outline-none focus:border-primary "
-                                    ></textarea>
-                                </div>
-                                <div>
-                                    <button class="hover:shadow-form rounded-md bg-primary py-3 px-8 text-base font-semibold text-white outline-none">
-                                        Submit
-                                    </button>
-                                </div>
-                            </form>
+                        <form class="mt-6" ref={form} onSubmit={sendEmail}>
+                        <div class="flex-1">
+                            <input
+                                name="user_name"
+                                type="text"
+                                placeholder="John Doe"
+                                class="block w-full px-5 py-3 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-red-400 focus:ring-red-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
+                            />
+                        </div>
+
+                        <div class="flex-1 mt-6">
+                            <input
+                                name="user_email"
+                                type="email"
+                                placeholder="johndoe@example.com"
+                                class="block w-full px-5 py-3 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-red-400 focus:ring-red-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
+                            />
+                        </div>
+                        <div class="flex-1 mt-6">
+                            <input
+                                name="subject"
+                                type="text"
+                                placeholder="subject"
+                                class="block w-full px-5 py-3 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-red-400 focus:ring-red-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
+                            />
+                        </div>
+
+                        <div class="w-full mt-6">
+                            <textarea
+                                name="message"
+                                class="block w-full h-32 px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md md:h-24 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-red-400 focus:ring-red-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
+                                placeholder="Message"
+                            ></textarea>
+                        </div>
+
+                        <button
+                            type="submit"
+                            class="w-full px-6 py-3 mt-6 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-red-600 rounded-md hover:bg-red-500 focus:outline-none focus:ring focus:ring-red-400 focus:ring-opacity-50"
+                        >
+                            get in touch
+                        </button>
+                    </form>
                         </div>
                     </div>
                 </div>

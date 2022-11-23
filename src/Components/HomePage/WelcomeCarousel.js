@@ -56,8 +56,8 @@ const WelcomeCarousel = () => {
                 <div className="flex md:flex-row flex-col gap-5 justify-around items-center my-10 py-10 container mx-auto">
                     <div>
                         <h1 className="text-white text-3xl font-bold font-rs">
-                            24/7 available. call us or message immediately <br />
-                            +8801234567890
+                            24/7 available.  message us immediately through messenger bot! <br />
+                            
                         </h1>
                     </div>
                     <div>
