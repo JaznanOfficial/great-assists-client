@@ -3,11 +3,11 @@ import CountUp from "react-countup";
 import emailjs from "@emailjs/browser";
 import Swal from "sweetalert2";
 // import ConfettiExplosion from "react-confetti-explosion";
-
+import Confetti from 'react-confetti'
 
 const NeedHelp = () => {
     const form = useRef();
-
+    const [isExploding, setIsExploding] = useState(false);
 
     const sendEmail = (e) => {
         e.preventDefault();
@@ -30,7 +30,7 @@ const NeedHelp = () => {
                         confirmButtonText: "Ok",
                     });
                     e.target.reset();
-                    
+                    setIsExploding(true);
                 },
                 (error) => {
                     Swal.fire({
@@ -45,7 +45,7 @@ const NeedHelp = () => {
 
     return (
         <>
-            
+            {isExploding && <Confetti width={window.innerWidth} height={3000} recycle={false} numberOfPieces={1000} /> }
             <div className="bg-slate-white py-14">
                 <div className="flex md:flex-row flex-col justify-around items-start">
                     <div className="">
