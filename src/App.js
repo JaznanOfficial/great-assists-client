@@ -6,7 +6,6 @@ import { Route, Routes } from "react-router-dom";
 import AboutPage from "./Pages/AboutPage";
 import ContactPage from "./Pages/ContactPage";
 import GalleryPage from "./Pages/GalleryPage";
-import AdminPage from "./Pages/AdminPage";
 import NotFoundPage from "./Pages/NotFoundPage";
 import Footer from "./Components/HomePage/Footer";
 import MessengerCustomerChat from "react-messenger-customer-chat";
@@ -27,7 +26,7 @@ function App() {
                 <Route path="/about" element={<AboutPage />}></Route>
                 <Route path="/contact" element={<ContactPage />}></Route>
                 <Route path="/gallery" element={<GalleryPage />}></Route>
-                <Route path="/admin" element={<AdminPage />}></Route>
+                
                 <Route path="*" element={<NotFoundPage />}></Route>
             </Routes>
             <Footer />
