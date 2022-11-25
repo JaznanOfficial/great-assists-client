@@ -6,7 +6,7 @@ const Footer = () => {
     return (
         <footer class="bg-black text-white h-fit">
             <div class="max-w-screen-xl px-4 py-10 mx-auto sm:px-6 lg:px-8 h-fit">
-                <div class="flex flex-col md:flex-row gap-5 md:gap-0 h-62">
+                <div class="flex flex-col justify-around items-center md:flex-row gap-5 md:gap-0 h-62">
                     <div>
                         <div className="flex flex-row md:justify-center justify-center items-center">
                             <img src={assist} className="mr-3 h-20 sm:h-20" alt="Site Logo" />
@@ -15,7 +15,7 @@ const Footer = () => {
                                 <span>Assists</span>
                             </span>
                         </div>
-                        <p class="max-w-xs mt-4 text-md text-gray-400">
+                        <p class="max-w-xs mt-4 text-lg text-gray-400">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas,
                             accusantium.
                         </p>
@@ -62,85 +62,60 @@ const Footer = () => {
                             </a>
                         </div>
                     </div>
-                    <div class="grid grid-cols-1 gap-8 lg:col-span-2 sm:grid-cols-2 lg:grid-cols-3">
-                        <div>
-                            <p class="font-medium">Important Link</p>
-                            <div class="flex flex-col mt-4 space-y-2 text-sm text-gray-500">
-                                <Link to="about" class="hover:opacity-75">
-                                    {" "}
-                                    About{" "}
-                                </Link>
-                                <Link to="about" class="hover:opacity-75">
-                                    {" "}
-                                    Contact{" "}
-                                </Link>
-                                <Link to="about" class="hover:opacity-75">
-                                    {" "}
-                                    Gallery{" "}
-                                </Link>
-                            </div>
-                        </div>
-                        <div>
-                            <p class="font-medium">Services</p>
-                            <nav class="flex flex-col mt-4 space-y-2 text-sm text-gray-500">
-                                <a class="hover:opacity-75" href>
-                                    {" "}
-                                    1on1 Coaching{" "}
-                                </a>
-                                <a class="hover:opacity-75" href>
-                                    {" "}
-                                    Company Review{" "}
-                                </a>
-                                <a class="hover:opacity-75" href>
-                                    {" "}
-                                    Accounts Review{" "}
-                                </a>
-                                <a class="hover:opacity-75" href>
-                                    {" "}
-                                    HR Consulting{" "}
-                                </a>
-                                <a class="hover:opacity-75" href>
-                                    {" "}
-                                    SEO Optimisation{" "}
-                                </a>
-                            </nav>
-                        </div>
-                        <div>
-                            <p class="font-medium">Gallery</p>
 
-                            <div class="flex w-full flex-wrap content-start justify-center p-5">
-                                <div class="grid grid-cols-3 gap-3">
-                                    <img
-                                        class="h-20 w-20 "
-                                        src="https://i.imgur.com/5yeBVeM.jpeg"
-                                        alt="gallery-pic"
-                                    />
-                                    <img
-                                        class="h-20 w-20 "
-                                        src="https://i.imgur.com/5yeBVeM.jpeg"
-                                        alt="gallery-pic"
-                                    />
-                                    <img
-                                        class="h-20 w-20 "
-                                        src="https://i.imgur.com/5yeBVeM.jpeg"
-                                        alt="gallery-pic"
-                                    />
-                                    <img
-                                        class="h-20 w-20 "
-                                        src="https://i.imgur.com/5yeBVeM.jpeg"
-                                        alt="gallery-pic"
-                                    />
-                                    <img
-                                        class="h-20 w-20 "
-                                        src="https://i.imgur.com/5yeBVeM.jpeg"
-                                        alt="gallery-pic"
-                                    />
-                                    <img
-                                        class="h-20 w-20 "
-                                        src="https://i.imgur.com/5yeBVeM.jpeg"
-                                        alt="gallery-pic"
-                                    />
-                                </div>
+                    <div>
+                        <p class="font-bold text-large">Important Link</p>
+                        <div class="flex flex-col mt-4 space-y-2 text-lg text-gray-500">
+                            <Link to="/about" class="hover:opacity-75">
+                                {" "}
+                                About{" "}
+                            </Link>
+                            <Link to="/contact" class="hover:opacity-75">
+                                {" "}
+                                Contact{" "}
+                            </Link>
+                            <Link to="/gallery" class="hover:opacity-75">
+                                {" "}
+                                Gallery{" "}
+                            </Link>
+                        </div>
+                    </div>
+
+                    <div>
+                        <p class="font-bold text-large">Gallery</p>
+
+                        <div class="flex w-full flex-wrap content-start justify-center p-5">
+                            <div class="grid grid-cols-3 gap-3">
+                                <img
+                                    class="h-20 w-20 "
+                                    src="https://i.imgur.com/5yeBVeM.jpeg"
+                                    alt="gallery-pic"
+                                />
+                                <img
+                                    class="h-20 w-20 "
+                                    src="https://i.imgur.com/5yeBVeM.jpeg"
+                                    alt="gallery-pic"
+                                />
+                                <img
+                                    class="h-20 w-20 "
+                                    src="https://i.imgur.com/5yeBVeM.jpeg"
+                                    alt="gallery-pic"
+                                />
+                                <img
+                                    class="h-20 w-20 "
+                                    src="https://i.imgur.com/5yeBVeM.jpeg"
+                                    alt="gallery-pic"
+                                />
+                                <img
+                                    class="h-20 w-20 "
+                                    src="https://i.imgur.com/5yeBVeM.jpeg"
+                                    alt="gallery-pic"
+                                />
+                                <img
+                                    class="h-20 w-20 "
+                                    src="https://i.imgur.com/5yeBVeM.jpeg"
+                                    alt="gallery-pic"
+                                />
                             </div>
                         </div>
                     </div>
