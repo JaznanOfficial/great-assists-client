@@ -31,7 +31,7 @@ const Navigation = () => {
                     <NavLink
                         to="/"
                         className={
-                            "border-b-2 border-white hover:border-b-primary focus:border-b-2 focus:border-b-primary p-3 md:mx-3 text-xl font-bold"
+                            "nav-margin border-b-2 border-white hover:border-b-primary focus:border-b-2 focus:border-b-primary p-3 text-xl font-bold"
                         }
                     >
                         Home
@@ -39,7 +39,7 @@ const Navigation = () => {
                     <NavLink
                         to="/about"
                         className={
-                            "border-b-2 border-white hover:border-b-primary focus:border-b-2 focus:border-b-primary p-3 mx-3 text-xl font-bold"
+                            "nav-margin border-b-2 border-white hover:border-b-primary focus:border-b-2 focus:border-b-primary p-3 mx-3 text-xl font-bold"
                         }
                     >
                         About
@@ -47,7 +47,7 @@ const Navigation = () => {
                     <NavLink
                         to="/contact"
                         className={
-                            "border-b-2 border-white hover:border-b-primary focus:border-b-2 focus:border-b-primary p-3 mx-3 text-xl font-bold"
+                            "nav-margin border-b-2 border-white hover:border-b-primary focus:border-b-2 focus:border-b-primary p-3 mx-3 text-xl font-bold"
                         }
                     >
                         Contact
@@ -55,7 +55,7 @@ const Navigation = () => {
                     <NavLink
                         to="/gallery"
                         className={
-                            "border-b-2 border-white hover:border-b-primary focus:border-b-2 focus:border-b-primary p-3 mx-3 text-xl font-bold"
+                            "nav-margin border-b-2 border-white hover:border-b-primary focus:border-b-2 focus:border-b-primary p-3 mx-3 text-xl font-bold"
                         }
                     >
                         Gallery

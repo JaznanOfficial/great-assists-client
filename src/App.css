@@ -12,3 +12,7 @@ a{
 h1{
   font-family:"'Roboto Slab', 'serif'";
 }
+
+.nav-margin{
+  margin: 0 10px !important;
+}
