@@ -8,19 +8,53 @@ import help from './help-them.png'
 
 const NeedHelp = () => {
     const form = useRef();
+    const [pic, setPic] = useState('');
+    const [pending, setPending] = useState(false);
     const [isExploding, setIsExploding] = useState(false);
+
+    const imageUrlKey = "cbe11c66352b77ec50a7a98263be9fcd";
+
+    const handlePicUpload = (e) => {
+        const image = e.target.files[0];
+        const formData = new FormData();
+        formData.append('image', image);
+        const url = `https://api.imgbb.com/1/upload?key=${imageUrlKey}`;
+        console.log(url);
+        fetch(url, {
+            method: 'POST',
+            body: formData
+        })
+            .then(res => res.json())
+            .then(result => {
+                if (result.success) {
+                    const img = result.data.url;
+                    console.log(img);
+                    setPic(img);
+                }
+            })
+
+    };
 
     const sendEmail = (e) => {
         e.preventDefault();
+        setPending(true);
 
-        console.log(form);
+
+
+        const data = {
+            name: e.target.name.value,
+            email: e.target.email.value,
+            message: e.target.message.value,
+            image: pic,
+            subject: e.target.subject.value
+        };
 
         emailjs
-            .sendForm(
-                "service_xahqw4n",
-                "template_elkp9tb",
-                form.current,
-                "user_1WP45SDevcirhN4i48N1M"
+            .send(
+                "service_uteqj2y",
+                "template_j5239qf",
+                data,
+                "CHXzzT2yBcDushZvC"
             )
             .then(
                 (result) => {
@@ -32,6 +66,8 @@ const NeedHelp = () => {
                     });
                     e.target.reset();
                     setIsExploding(true);
+                    setPic('');
+                    setPending(false);
                 },
                 (error) => {
                     Swal.fire({
@@ -40,6 +76,8 @@ const NeedHelp = () => {
                         icon: "error",
                         confirmButtonText: "Ok",
                     });
+                    setPending(false);
+
                 }
             );
     };
