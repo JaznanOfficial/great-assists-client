@@ -46,7 +46,7 @@ const NeedHelp = () => {
 
     return (
         <>
-            {isExploding && <Confetti width={window.innerWidth} height={3000} recycle={false} numberOfPieces={1000} /> }
+            {isExploding && <Confetti width={window.innerWidth} height={3000} recycle={false} numberOfPieces={1000} />}
             <div className="bg-slate-white py-14">
                 <div className="flex md:flex-row flex-col justify-around items-center">
                     <div className="">
@@ -60,7 +60,7 @@ const NeedHelp = () => {
                     <div>
                         <div className="">
                             <h1 className="text-6xl font-bold ">
-                            <span className="text-primary">Help</span> Them With Us 
+                                <span className="text-primary">Help</span> Them With Us
                             </h1>
                         </div>
                         <div class="flex items-center justify-center">
@@ -88,6 +88,14 @@ const NeedHelp = () => {
                                             name="subject"
                                             type="text"
                                             placeholder="subject"
+                                            class="block w-full px-5 py-3 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-red-400 focus:ring-red-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
+                                        />
+                                    </div>
+                                    <div class="flex-1 mt-6">
+                                        <input
+                                            name="image"
+                                            type="file"
+                                            placeholder="image"
                                             class="block w-full px-5 py-3 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-red-400 focus:ring-red-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
                                         />
                                     </div>
@@ -121,7 +129,7 @@ const NeedHelp = () => {
                                 <CountUp end={150} duration={10} />+
                             </h1>
                             <h2 className="md:text-start">
-                            110+ Rescue People Saved
+                                110+ Rescue People Saved
                             </h2>
                         </div>
                         <div className="text-white font-bold">
@@ -132,7 +140,7 @@ const NeedHelp = () => {
                                 <CountUp end={130} duration={10} />+
                             </h1>
                             <h2 className="md:text-start">
-                            120+ Rescue Animals Saved
+                                120+ Rescue Animals Saved
                             </h2>
                         </div>
                         <div className="text-white font-bold">
