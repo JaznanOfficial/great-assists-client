@@ -4,6 +4,7 @@ import emailjs from "@emailjs/browser";
 import Swal from "sweetalert2";
 // import ConfettiExplosion from "react-confetti-explosion";
 import Confetti from 'react-confetti'
+import help from './help-them.png'
 
 const NeedHelp = () => {
     const form = useRef();
@@ -47,18 +48,19 @@ const NeedHelp = () => {
         <>
             {isExploding && <Confetti width={window.innerWidth} height={3000} recycle={false} numberOfPieces={1000} /> }
             <div className="bg-slate-white py-14">
-                <div className="flex md:flex-row flex-col justify-around items-start">
+                <div className="flex md:flex-row flex-col justify-around items-center">
                     <div className="">
                         <img
-                            src="https://img.freepik.com/premium-vector/psychology-concept-helpless-person-suffering-from-depression-mental-disorder-woman-despair-feeling-hopeless-depressed-unhappy-human-with-psychological-problem-flat-vector-illustration_633472-67.jpg"
+                            src={help}
                             alt=""
+                            width={'350px'}
                         />
                     </div>
 
                     <div>
                         <div className="">
                             <h1 className="text-6xl font-bold ">
-                                They need your <span className="text-primary">help</span>
+                            <span className="text-primary">Help</span> Them With Us 
                             </h1>
                         </div>
                         <div class="flex items-center justify-center">
@@ -119,8 +121,7 @@ const NeedHelp = () => {
                                 <CountUp end={150} duration={10} />+
                             </h1>
                             <h2 className="md:text-start">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit nobis
-                                facere, modi quia iusto necessitatibus!
+                            110+ Rescue People Saved
                             </h2>
                         </div>
                         <div className="text-white font-bold">
@@ -131,8 +132,7 @@ const NeedHelp = () => {
                                 <CountUp end={130} duration={10} />+
                             </h1>
                             <h2 className="md:text-start">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit nobis
-                                facere, modi quia iusto necessitatibus!
+                            120+ Rescue Animals Saved
                             </h2>
                         </div>
                         <div className="text-white font-bold">
@@ -143,8 +143,7 @@ const NeedHelp = () => {
                                 <CountUp end={170} duration={10} />+
                             </h1>
                             <h2 className="md:text-start">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit nobis
-                                facere, modi quia iusto necessitatibus!
+                                More Help
                             </h2>
                         </div>
                     </div>

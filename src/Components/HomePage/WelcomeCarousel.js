@@ -11,17 +11,15 @@ const WelcomeCarousel = () => {
                     <h1 className="md:text-3xl text-2xl font-bold my-5">
                         Welcome to{" "}
                         <span className="bg-black px-3 py-2 rounded-lg">
-                            <span className="text-primary">Great</span>{" "}
-                            <span className="text-white">Assists</span>
+                            <span className="text-primary">Rescue</span>{" "}
+                            <span className="text-white">Me</span>
                         </span>
                     </h1>
                     <hr className="w-1/12 mx-auto border-2 border-primary" />
                     <div className="md:w-2/3 mx-auto">
                         <p className="my-5">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis
-                            placeat dolores quas esse, saepe reprehenderit aliquam ad ipsam
-                            perferendis explicabo quae voluptate rerum. Vel quidem sequi dolorum
-                            earum, totam obcaecati?
+                        With the intention of saving more lives, we are establishing an Alliance to address the structural issues
+                        affecting the communities, people, and animals in our area and beyond.
                         </p>
                     </div>
                 </div>

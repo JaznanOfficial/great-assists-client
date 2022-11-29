@@ -22,8 +22,8 @@ const Navigation = () => {
                 <Navbar.Brand href="/">
                     <img src={assist} className="mr-3 h-20 sm:h-20" alt="Site Logo" />
                     <span className="self-center whitespace-nowrap text-3xl font-semibold font-rs">
-                        <span className="text-primary">Great</span>
-                        <span>Assists</span>
+                        <span className="text-primary">Rescue</span>
+                        <span>Me</span>
                     </span>
                 </Navbar.Brand>
                 <Navbar.Toggle />

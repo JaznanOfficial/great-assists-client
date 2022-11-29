@@ -11,8 +11,8 @@ const Footer = () => {
                         <div className="flex flex-row md:justify-center justify-center items-center">
                             <img src={assist} className="mr-3 h-20 sm:h-20" alt="Site Logo" />
                             <span className="self-center whitespace-nowrap text-3xl font-semibold font-rs">
-                                <span className="text-primary">Great</span>
-                                <span>Assists</span>
+                                <span className="text-primary">Rescue</span>
+                                <span>Me</span>
                             </span>
                         </div>
                         <p class="max-w-xs mt-4 text-lg text-gray-400">
