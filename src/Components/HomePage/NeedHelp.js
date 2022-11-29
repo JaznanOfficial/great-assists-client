@@ -106,7 +106,7 @@ const NeedHelp = () => {
                                 <form class="mt-6" ref={form} onSubmit={sendEmail}>
                                     <div class="flex-1">
                                         <input
-                                            name="user_name"
+                                            name="name"
                                             type="text"
                                             placeholder="John Doe"
                                             class="block w-full px-5 py-3 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-red-400 focus:ring-red-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
@@ -115,7 +115,7 @@ const NeedHelp = () => {
 
                                     <div class="flex-1 mt-6">
                                         <input
-                                            name="user_email"
+                                            name="email"
                                             type="email"
                                             placeholder="johndoe@example.com"
                                             class="block w-full px-5 py-3 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-red-400 focus:ring-red-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
@@ -129,14 +129,24 @@ const NeedHelp = () => {
                                             class="block w-full px-5 py-3 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-red-400 focus:ring-red-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
                                         />
                                     </div>
-                                    <div class="flex-1 mt-6">
-                                        <input
-                                            name="image"
-                                            type="file"
-                                            placeholder="image"
-                                            class="block w-full px-5 py-3 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-red-400 focus:ring-red-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
-                                        />
+                                    <div className="flex-1 mt-6">
+
+                                        {
+                                            pic === '' ?
+                                                <div onChange={handlePicUpload} class="flex-1 mt-6">
+                                                    <input
+                                                        name="image"
+                                                        type="file"
+                                                        placeholder="image"
+                                                        class="block w-full px-5 py-3 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-red-400 focus:ring-red-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
+                                                    />
+                                                </div> :
+                                                <div className="w-full h-32 rounded">
+                                                    <img name="image" value={pic} src={pic} alt="" className="h-full w-2/3 rounded" />
+                                                </div>
+                                        }
                                     </div>
+
 
                                     <div class="w-full mt-6">
                                         <textarea
@@ -146,7 +156,7 @@ const NeedHelp = () => {
                                         ></textarea>
                                     </div>
 
-                                    <button
+                                    <button disabled={pending ? true : false}
                                         type="submit"
                                         class="w-full px-6 py-3 mt-6 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-red-600 rounded-md hover:bg-red-500 focus:outline-none focus:ring focus:ring-red-400 focus:ring-opacity-50"
                                     >
