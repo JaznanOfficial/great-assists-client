@@ -19,7 +19,7 @@ function App() {
                 viewBox="0 0 150 250"
                 style={{ borderRadius: "20%", right: 30, bottom: 100 }}
             />
-            <MessengerCustomerChat pageId="<PAGE_ID>" appId="<APP_ID>" />,
+            <MessengerCustomerChat pageId="100088200374139" appId="594155188895748" />,
             <Navigation />
             <Routes>
                 <Route path="/" element={<HomePage />}></Route>
