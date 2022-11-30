@@ -32,7 +32,7 @@ const WelcomeCarousel = () => {
                             alt="..."
                         />
                         <img
-                            src="https://ofhsoupkitchen.org/wp-content/uploads/2021/11/100-ways-to-help-others-1.jpg"
+                            src="https://ca-times.brightspotcdn.com/dims4/default/77c4cc5/2147483647/strip/true/crop/3840x2160+0+0/resize/1486x836!/quality/80/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2Ff1%2Fd7%2F0865bec74a43b47e6cd6fb8a7325%2Ftherescue-sg-028.jpg"
                             alt="..."
                         />
                         <img
