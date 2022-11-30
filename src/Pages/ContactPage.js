@@ -74,25 +74,11 @@ const ContactPage = () => {
                                             <span class="sr-only"> Facebook </span>
                                             <i class="fa-brands fa-facebook text-3xl mx-1"></i>
                                         </a>
-                                        <a
-                                            class="hover:opacity-70 mx-4 text-sky-800"
-                                            href="www.facebook.com"
-                                            target="_blank"
-                                        >
-                                            <span class="sr-only"> LinkedIn </span>
-                                            <i class="fa-brands fa-linkedin text-3xl mx-1"></i>
-                                        </a>
-                                        <a
-                                            class="hover:opacity-70 mx-4 text-black"
-                                            href="www.facebook.com"
-                                            target="_blank"
-                                        >
-                                            <span class="sr-only"> Github </span>
-                                            <i class="fa-brands fa-github text-3xl mx-1"></i>
-                                        </a>
+                                        
+                                        
                                         <a
                                             class="hover:opacity-70 mx-4 text-cyan-600"
-                                            href="www.facebook.com"
+                                            href="https://twitter.com/RescueMe321"
                                             target="_blank"
                                         >
                                             <span class="sr-only"> Twitter </span>
@@ -100,7 +86,7 @@ const ContactPage = () => {
                                         </a>
                                         <a
                                             class="hover:opacity-70 mx-4 text-pink-600"
-                                            href="www.facebook.com"
+                                            href="https://www.instagram.com/merescue321/"
                                             target="_blank"
                                         >
                                             <span class="sr-only"> Instagram </span>

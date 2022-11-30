@@ -60,7 +60,7 @@ const NeedHelp = () => {
                     <div>
                         <div className="">
                             <h1 className="text-6xl font-bold ">
-                            <span className="text-primary">Help</span> Them With Us 
+                                Get Immediate <span className="text-primary">Help</span>
                             </h1>
                         </div>
                         <div class="flex items-center justify-center">
@@ -104,14 +104,14 @@ const NeedHelp = () => {
                                         type="submit"
                                         class="w-full px-6 py-3 mt-6 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-red-600 rounded-md hover:bg-red-500 focus:outline-none focus:ring focus:ring-red-400 focus:ring-opacity-50"
                                     >
-                                        get in touch
+                                        Submit
                                     </button>
                                 </form>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div className=" bg-red-600">
+                {/* <div className=" bg-red-600">
                     <div className="flex md:flex-row flex-col gap-10 justify-around items-center my-10 p-10 container mx-auto">
                         <div className="text-white font-bold">
                             <h1 className="text-5xl">
@@ -147,7 +147,7 @@ const NeedHelp = () => {
                             </h2>
                         </div>
                     </div>
-                </div>
+                </div> */}
             </div>
         </>
     );
