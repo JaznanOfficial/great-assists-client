@@ -98,11 +98,7 @@ const NeedHelp = () => {
                     <div>
                         <div className="">
                             <h1 className="text-6xl font-bold ">
-<<<<<<< HEAD
                                 Get Immediate <span className="text-primary">Help</span>
-=======
-                                <span className="text-primary">Help</span> Them With Us
->>>>>>> 819efe32260679708f9f1e9f667222aa27a89a8f
                             </h1>
                         </div>
                         <div class="flex items-center justify-center">
