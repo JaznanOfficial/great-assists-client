@@ -8,19 +8,53 @@ import help from './help-them.png'
 
 const NeedHelp = () => {
     const form = useRef();
+    const [pic, setPic] = useState('');
+    const [pending, setPending] = useState(false);
     const [isExploding, setIsExploding] = useState(false);
+
+    const imageUrlKey = "cbe11c66352b77ec50a7a98263be9fcd";
+
+    const handlePicUpload = (e) => {
+        const image = e.target.files[0];
+        const formData = new FormData();
+        formData.append('image', image);
+        const url = `https://api.imgbb.com/1/upload?key=${imageUrlKey}`;
+        console.log(url);
+        fetch(url, {
+            method: 'POST',
+            body: formData
+        })
+            .then(res => res.json())
+            .then(result => {
+                if (result.success) {
+                    const img = result.data.url;
+                    console.log(img);
+                    setPic(img);
+                }
+            })
+
+    };
 
     const sendEmail = (e) => {
         e.preventDefault();
+        setPending(true);
 
-        console.log(form);
+
+
+        const data = {
+            name: e.target.name.value,
+            email: e.target.email.value,
+            message: e.target.message.value,
+            image: pic,
+            subject: e.target.subject.value
+        };
 
         emailjs
-            .sendForm(
-                "service_xahqw4n",
-                "template_elkp9tb",
-                form.current,
-                "user_1WP45SDevcirhN4i48N1M"
+            .send(
+                "service_uteqj2y",
+                "template_j5239qf",
+                data,
+                "CHXzzT2yBcDushZvC"
             )
             .then(
                 (result) => {
@@ -32,6 +66,8 @@ const NeedHelp = () => {
                     });
                     e.target.reset();
                     setIsExploding(true);
+                    setPic('');
+                    setPending(false);
                 },
                 (error) => {
                     Swal.fire({
@@ -40,13 +76,15 @@ const NeedHelp = () => {
                         icon: "error",
                         confirmButtonText: "Ok",
                     });
+                    setPending(false);
+
                 }
             );
     };
 
     return (
         <>
-            {isExploding && <Confetti width={window.innerWidth} height={3000} recycle={false} numberOfPieces={1000} /> }
+            {isExploding && <Confetti width={window.innerWidth} height={3000} recycle={false} numberOfPieces={1000} />}
             <div className="bg-slate-white py-14">
                 <div className="flex md:flex-row flex-col justify-around items-center">
                     <div className="">
@@ -60,7 +98,11 @@ const NeedHelp = () => {
                     <div>
                         <div className="">
                             <h1 className="text-6xl font-bold ">
+<<<<<<< HEAD
                                 Get Immediate <span className="text-primary">Help</span>
+=======
+                                <span className="text-primary">Help</span> Them With Us
+>>>>>>> 819efe32260679708f9f1e9f667222aa27a89a8f
                             </h1>
                         </div>
                         <div class="flex items-center justify-center">
@@ -68,7 +110,7 @@ const NeedHelp = () => {
                                 <form class="mt-6" ref={form} onSubmit={sendEmail}>
                                     <div class="flex-1">
                                         <input
-                                            name="user_name"
+                                            name="name"
                                             type="text"
                                             placeholder="John Doe"
                                             class="block w-full px-5 py-3 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-red-400 focus:ring-red-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
@@ -77,7 +119,7 @@ const NeedHelp = () => {
 
                                     <div class="flex-1 mt-6">
                                         <input
-                                            name="user_email"
+                                            name="email"
                                             type="email"
                                             placeholder="johndoe@example.com"
                                             class="block w-full px-5 py-3 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-red-400 focus:ring-red-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
@@ -91,6 +133,24 @@ const NeedHelp = () => {
                                             class="block w-full px-5 py-3 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-red-400 focus:ring-red-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
                                         />
                                     </div>
+                                    <div className="flex-1 mt-6">
+
+                                        {
+                                            pic === '' ?
+                                                <div onChange={handlePicUpload} class="flex-1 mt-6">
+                                                    <input
+                                                        name="image"
+                                                        type="file"
+                                                        placeholder="image"
+                                                        class="block w-full px-5 py-3 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-red-400 focus:ring-red-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
+                                                    />
+                                                </div> :
+                                                <div className="w-full h-32 rounded">
+                                                    <img name="image" value={pic} src={pic} alt="" className="h-full w-2/3 rounded" />
+                                                </div>
+                                        }
+                                    </div>
+
 
                                     <div class="w-full mt-6">
                                         <textarea
@@ -100,7 +160,7 @@ const NeedHelp = () => {
                                         ></textarea>
                                     </div>
 
-                                    <button
+                                    <button disabled={pending ? true : false}
                                         type="submit"
                                         class="w-full px-6 py-3 mt-6 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-red-600 rounded-md hover:bg-red-500 focus:outline-none focus:ring focus:ring-red-400 focus:ring-opacity-50"
                                     >
@@ -121,7 +181,7 @@ const NeedHelp = () => {
                                 <CountUp end={150} duration={10} />+
                             </h1>
                             <h2 className="md:text-start">
-                            110+ Rescue People Saved
+                                110+ Rescue People Saved
                             </h2>
                         </div>
                         <div className="text-white font-bold">
@@ -132,7 +192,7 @@ const NeedHelp = () => {
                                 <CountUp end={130} duration={10} />+
                             </h1>
                             <h2 className="md:text-start">
-                            120+ Rescue Animals Saved
+                                120+ Rescue Animals Saved
                             </h2>
                         </div>
                         <div className="text-white font-bold">
