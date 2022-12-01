@@ -46,7 +46,9 @@ const NeedHelp = () => {
             email: e.target.email.value,
             message: e.target.message.value,
             image: pic,
-            subject: e.target.subject.value
+            subject: e.target.subject.value,
+            address: e.target.address.value,
+            phone: e.target.phone.value,
         };
 
         emailjs
@@ -108,7 +110,7 @@ const NeedHelp = () => {
                                         <input
                                             name="name"
                                             type="text"
-                                            placeholder="John Doe"
+                                            placeholder="Name"
                                             class="block w-full px-5 py-3 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-red-400 focus:ring-red-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
                                         />
                                     </div>
@@ -117,7 +119,16 @@ const NeedHelp = () => {
                                         <input
                                             name="email"
                                             type="email"
-                                            placeholder="johndoe@example.com"
+                                            placeholder="Email"
+                                            class="block w-full px-5 py-3 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-red-400 focus:ring-red-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
+                                        />
+                                    </div>
+                                    <div class="flex-1 mt-6">
+                                        <input
+                                            name="phone"
+                                            type="text"
+                                            maxLength={11}
+                                            placeholder="Phone Number"
                                             class="block w-full px-5 py-3 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-red-400 focus:ring-red-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
                                         />
                                     </div>
@@ -148,6 +159,13 @@ const NeedHelp = () => {
                                     </div>
 
 
+                                    <div class="w-full mt-6">
+                                        <textarea
+                                            name="address"
+                                            class="block w-full h-32 px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md md:h-24 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-red-400 focus:ring-red-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
+                                            placeholder="Enter your full address"
+                                        ></textarea>
+                                    </div>
                                     <div class="w-full mt-6">
                                         <textarea
                                             name="message"
