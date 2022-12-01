@@ -202,7 +202,7 @@ const NeedHelp = () => {
                                 <CountUp end={150} duration={10} />+
                             </h1>
                             <h2 className="md:text-start">
-                                110+ Rescue People Saved
+                                Rescue People Saved
                             </h2>
                         </div>
                         <div className="text-white font-bold">
@@ -213,7 +213,7 @@ const NeedHelp = () => {
                                 <CountUp end={130} duration={10} />+
                             </h1>
                             <h2 className="md:text-start">
-                                120+ Rescue Animals Saved
+                                Rescue Animals Saved
                             </h2>
                         </div>
                         <div className="text-white font-bold">
