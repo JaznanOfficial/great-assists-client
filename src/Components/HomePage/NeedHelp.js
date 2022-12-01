@@ -108,6 +108,7 @@ const NeedHelp = () => {
                                 <form class="mt-6" ref={form} onSubmit={sendEmail}>
                                     <div class="flex-1">
                                         <input
+                                        required
                                             name="name"
                                             type="text"
                                             placeholder="Name"
@@ -117,6 +118,7 @@ const NeedHelp = () => {
 
                                     <div class="flex-1 mt-6">
                                         <input
+                                        required
                                             name="email"
                                             type="email"
                                             placeholder="Email"
@@ -125,6 +127,7 @@ const NeedHelp = () => {
                                     </div>
                                     <div class="flex-1 mt-6">
                                         <input
+                                        required
                                             name="phone"
                                             type="text"
                                             maxLength={11}
@@ -134,6 +137,7 @@ const NeedHelp = () => {
                                     </div>
                                     <div class="flex-1 mt-6">
                                         <input
+                                        required
                                             name="subject"
                                             type="text"
                                             placeholder="subject"
@@ -146,6 +150,7 @@ const NeedHelp = () => {
                                             pic === '' ?
                                                 <div onChange={handlePicUpload} class="flex-1 mt-6">
                                                     <input
+                                                    required
                                                         name="image"
                                                         type="file"
                                                         placeholder="image"
@@ -161,6 +166,7 @@ const NeedHelp = () => {
 
                                     <div class="w-full mt-6">
                                         <textarea
+                                        required
                                             name="address"
                                             class="block w-full h-32 px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md md:h-24 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-red-400 focus:ring-red-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
                                             placeholder="Enter your full address"
@@ -168,6 +174,7 @@ const NeedHelp = () => {
                                     </div>
                                     <div class="w-full mt-6">
                                         <textarea
+                                        required
                                             name="message"
                                             class="block w-full h-32 px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md md:h-24 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-red-400 focus:ring-red-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
                                             placeholder="Message"
@@ -185,7 +192,7 @@ const NeedHelp = () => {
                         </div>
                     </div>
                 </div>
-                {/* <div className=" bg-red-600">
+                <div className=" bg-red-600">
                     <div className="flex md:flex-row flex-col gap-10 justify-around items-center my-10 p-10 container mx-auto">
                         <div className="text-white font-bold">
                             <h1 className="text-5xl">
@@ -221,7 +228,7 @@ const NeedHelp = () => {
                             </h2>
                         </div>
                     </div>
-                </div> */}
+                </div> 
             </div>
         </>
     );

@@ -19,7 +19,7 @@ function App() {
                 viewBox="0 0 150 250"
                 style={{ borderRadius: "20%", right: 30, bottom: 100 }}
             />
-            <MessengerCustomerChat pageId="102341252721931" appId="594155188895748" />,
+            
             <Navigation />
             <Routes>
                 <Route path="/" element={<HomePage />}></Route>
@@ -30,6 +30,7 @@ function App() {
                 <Route path="*" element={<NotFoundPage />}></Route>
             </Routes>
             <Footer />
+            <MessengerCustomerChat pageId="102341252721931" appId="594155188895748" />
         </div>
     );
 }
