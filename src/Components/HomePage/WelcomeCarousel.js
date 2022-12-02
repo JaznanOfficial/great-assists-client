@@ -39,10 +39,7 @@ const WelcomeCarousel = () => {
                             src="https://www.psychnewsdaily.com/wp-content/uploads/2021/05/helping-others-girl-helping-boy-stand-up.jpg"
                             alt="..."
                         />
-                        <img
-                            src="https://www.theguesthouseocala.com/wp-content/uploads/2018/12/0065.jpg"
-                            alt="..."
-                        />
+                        
                         <img
                             src="https://ggsc.s3.amazonaws.com/images/uploads/How_Generosity_Can_Make_You_Happier_in_a_Pandemic.jpg"
                             alt="..."
