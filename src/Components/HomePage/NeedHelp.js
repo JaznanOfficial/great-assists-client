@@ -44,9 +44,10 @@ const NeedHelp = () => {
         const data = {
             name: e.target.name.value,
             email: e.target.email.value,
-            message: e.target.message.value,
+            subject: e.target.subject.value,
             image: pic,
-            subject: e.target.subject.value
+            address: e.target.address.value,
+            message: e.target.message.value
         };
 
         emailjs
@@ -147,11 +148,18 @@ const NeedHelp = () => {
                                         }
                                     </div>
 
+                                    <div class="w-full mt-6">
+                                        <textarea
+                                            name="address"
+                                            class="block w-full h-16 px-5 resize-none py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md md:h-20 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-red-400 focus:ring-red-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
+                                            placeholder="Enter Address"
+                                        ></textarea>
+                                    </div>
 
                                     <div class="w-full mt-6">
                                         <textarea
                                             name="message"
-                                            class="block w-full h-32 px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md md:h-24 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-red-400 focus:ring-red-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
+                                            class="block w-full h-20 resize-none px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md md:h-24 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-red-400 focus:ring-red-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
                                             placeholder="Message"
                                         ></textarea>
                                     </div>
