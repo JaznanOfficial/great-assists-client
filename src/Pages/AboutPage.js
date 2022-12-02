@@ -1,6 +1,8 @@
 import React from "react";
 import about1 from '../Components/HomePage/about-1.jpg'
 import about2 from '../Components/HomePage/about-2.jpg'
+import about3 from '../Images/gp-1.jpg'
+import about4 from '../Images/gp-10.jpg'
 
 const AboutPage = () => {
     return (
@@ -93,6 +95,16 @@ const AboutPage = () => {
                         <img
                             class="object-cover w-full h-48 rounded shadow-lg"
                             src={about2}
+                            alt=""
+                        />
+                        <img
+                            class="object-cover w-full h-48 rounded shadow-lg"
+                            src={about3}
+                            alt=""
+                        />
+                        <img
+                            class="object-cover w-full h-48 col-span-2 rounded shadow-lg"
+                            src={about4}
                             alt=""
                         />
                         

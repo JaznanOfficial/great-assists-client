@@ -7,12 +7,10 @@ import WelcomeCarousel from "../Components/HomePage/WelcomeCarousel";
 const HomePage = () => {
     return (
         <div>
-            
             <Banner />
             <WelcomeCarousel />
             <NeedHelp />
             <VolunteerSection />
-            
         </div>
     );
 };
