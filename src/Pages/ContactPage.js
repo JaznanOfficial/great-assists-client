@@ -2,6 +2,7 @@ import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import Swal from "sweetalert2";
 import Confetti from "react-confetti";
+import useFirebase from "../Hooks/useFirebase";
 
 const ContactPage = () => {
     const [isExploding, setIsExploding] = useState(false);
@@ -43,6 +44,9 @@ const ContactPage = () => {
 
     const bgImage =
         "https://images.unsplash.com/photo-1563986768609-322da13575f3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80";
+
+    const { user, signInWithGoogle } = useFirebase();
+
     return (
         <>
             {isExploding && (
@@ -125,6 +129,7 @@ const ContactPage = () => {
                                         <div class="flex-1 mt-6">
                                             <input
                                                 required
+                                                defaultValue={user?.email}
                                                 name="user_email"
                                                 type="email"
                                                 placeholder="email"
@@ -149,12 +154,21 @@ const ContactPage = () => {
                                             ></textarea>
                                         </div>
 
-                                        <button
-                                            type="submit"
-                                            class="w-full px-6 py-3 mt-6 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-red-600 rounded-md hover:bg-red-500 focus:outline-none focus:ring focus:ring-red-400 focus:ring-opacity-50"
-                                        >
-                                            get in touch
-                                        </button>
+                                        {user.auth ? (
+                                            <button
+                                                type="submit"
+                                                class="w-full px-6 py-3 mt-6 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-red-600 rounded-md hover:bg-red-500 focus:outline-none focus:ring focus:ring-red-400 focus:ring-opacity-50"
+                                            >
+                                                get in touch
+                                            </button>
+                                        ) : (
+                                            <button
+                                                onClick={()=>signInWithGoogle()}
+                                                class="w-full px-6 py-3 mt-6 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-red-600 rounded-md hover:bg-red-500 focus:outline-none focus:ring focus:ring-red-400 focus:ring-opacity-50"
+                                            >
+                                                Sign In First please
+                                            </button>
+                                        )}
                                     </form>
                                 </div>
                             </div>
