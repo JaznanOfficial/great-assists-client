@@ -78,7 +78,7 @@ const ContactPage = () => {
                                     <div class="flex justify-center mt-8 space-x-6 ">
                                         <a
                                             class="hover:opacity-70 mx-4 text-sky-600"
-                                            href="www.facebook.com"
+                                            href="https://www.facebook.com/humanandanimalrescuecenter"
                                             target="_blank"
                                         >
                                             <span class="sr-only"> Facebook </span>
