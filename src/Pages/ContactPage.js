@@ -159,14 +159,14 @@ const ContactPage = () => {
                                                 type="submit"
                                                 class="w-full px-6 py-3 mt-6 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-red-600 rounded-md hover:bg-red-500 focus:outline-none focus:ring focus:ring-red-400 focus:ring-opacity-50"
                                             >
-                                                get in touch
+                                                Get In Touch
                                             </button>
                                         ) : (
                                             <button
                                                 onClick={()=>signInWithGoogle()}
                                                 class="w-full px-6 py-3 mt-6 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-red-600 rounded-md hover:bg-red-500 focus:outline-none focus:ring focus:ring-red-400 focus:ring-opacity-50"
                                             >
-                                                Sign In First please
+                                                Get in Touch
                                             </button>
                                         )}
                                     </form>

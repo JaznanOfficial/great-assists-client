@@ -1,8 +1,8 @@
 import { Carousel } from "flowbite-react";
 import React from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-// import { Carousel } from "react-responsive-carousel";
-
+import gp1 from '../../Images/gp-1.jpg'
+import gp2 from '../../Images/gp-2.jpg'
 const WelcomeCarousel = () => {
     return (
         <div>
@@ -29,6 +29,14 @@ const WelcomeCarousel = () => {
                     <Carousel>
                         <img
                             src="https://www.successconsciousness.com/blog/wp-content/uploads/helping-others.jpg"
+                            alt="..."
+                        />
+                        <img
+                            src={gp1}
+                            alt="..."
+                        />
+                        <img
+                            src={gp2}
                             alt="..."
                         />
                         <img
