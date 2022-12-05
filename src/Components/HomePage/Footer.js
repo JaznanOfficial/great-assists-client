@@ -36,7 +36,7 @@ const Footer = () => {
                         <div class="flex justify-center mt-8 space-x-6 text-gray-600">
                             <a
                                 class="hover:opacity-75 mx-4"
-                                href="www.facebook.com"
+                                href="https://www.facebook.com/humanandanimalrescuecenter"
                                 target="_blank"
                             >
                                 <span class="sr-only"> Facebook </span>
@@ -45,7 +45,7 @@ const Footer = () => {
                             
                             <a
                                 class="hover:opacity-75 mx-4"
-                                href="www.facebook.com"
+                                href="https://twitter.com/RescueMe321"
                                 target="_blank"
                             >
                                 <span class="sr-only"> Twitter </span>
@@ -53,7 +53,7 @@ const Footer = () => {
                             </a>
                             <a
                                 class="hover:opacity-75 mx-4"
-                                href="www.facebook.com"
+                                href="https://www.instagram.com/merescue321/"
                                 target="_blank"
                             >
                                 <span class="sr-only"> Instagram </span>

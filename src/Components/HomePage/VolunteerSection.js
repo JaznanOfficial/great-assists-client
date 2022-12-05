@@ -41,7 +41,7 @@ const VolunteerSection = () => {
                                 <i className="fa-brands fa-instagram text-black m-0 p-0"></i>
                             </a>
                             <a
-                                href="https://www.instagram.com/__sohan_/"
+                                href="https://www.linkedin.com/in/sohanur-rahman-81a294194/"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="p-1 rounded-full text-white transition-colors duration-500  hover:bg-red-200 w-8"
@@ -80,7 +80,7 @@ const VolunteerSection = () => {
                         <p>Co-Volunteer</p>
                         <div className="flex flex-nowrap justify-center items-center">
                             <a
-                                href=""
+                                href="https://www.instagram.com/nadim_mahamud1/"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="p-1 rounded-full text-white transition-colors duration-500  hover:bg-red-200 w-8"
@@ -88,7 +88,7 @@ const VolunteerSection = () => {
                                 <i className="fa-brands fa-instagram text-black m-0 p-0"></i>
                             </a>
                             <a
-                                href=""
+                                href="https://www.linkedin.com/in/nadim-mahamud-713571199/"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="p-1 rounded-full text-white transition-colors duration-500  hover:bg-red-200 w-8"
@@ -104,7 +104,7 @@ const VolunteerSection = () => {
                                 <i className="fa-brands fa-facebook-f text-black m-0 p-0"></i>
                             </a>
                             <a
-                                href=""
+                                href="https://twitter.com/191_nadim"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className=" p-1 rounded-full text-white transition-colors duration-500  hover:bg-red-200 w-8"
