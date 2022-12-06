@@ -6,6 +6,8 @@ import {
     onAuthStateChanged,
     signInWithPopup,
     signOut,
+    signInWithPhoneNumber,
+    RecaptchaVerifier
 } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
 
@@ -16,6 +18,7 @@ const useFirebase = () => {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState({});
     const auth = getAuth();
+    const appVerifier = window.recaptchaVerifier;
 
     const googleProvider = new GoogleAuthProvider();
 
@@ -31,6 +34,13 @@ const useFirebase = () => {
                 console.log(error);
             });
     };
+
+    
+
+    const phoneSignIn = (phoneNumber) => {
+        return signInWithPhoneNumber(auth, phoneNumber, appVerifier)
+        
+    }
 
     const logOut = () => {
         return signOut(auth)
@@ -61,6 +71,7 @@ const useFirebase = () => {
         user,
         loading,
         logOut,
+        phoneSignIn
         
     };
 };
