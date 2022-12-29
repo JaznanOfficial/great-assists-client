@@ -6,6 +6,7 @@ import Swal from "sweetalert2";
 import Confetti from "react-confetti";
 import help from "./help-them.png";
 import useFirebase from "../../Hooks/useFirebase";
+import axios from "axios";
 
 const NeedHelp = () => {
     const form = useRef();
@@ -37,11 +38,11 @@ const NeedHelp = () => {
             });
     };
 
-    const sendEmail = (e) => {
+    const sendEmail = async(e) => {
         e.preventDefault();
         setPending(true);
 
-        const data = {
+        const helpsData = {
             name: e.target.name.value,
             email: e.target.email.value,
             phone: e.target.phone.value,
@@ -51,7 +52,7 @@ const NeedHelp = () => {
             message: e.target.message.value,
         };
 
-        phoneSignIn(data?.phone)
+        phoneSignIn(helpsData?.phone)
             .then((confirmationResult) => {
                 // SMS sent. Prompt user to type the code from the message, then sign the
                 // user in with confirmationResult.confirm(code).
@@ -64,7 +65,7 @@ const NeedHelp = () => {
                 console.log(error);
             });
 
-        emailjs.send("service_uteqj2y", "template_j5239qf", data, "CHXzzT2yBcDushZvC").then(
+        emailjs.send("service_uteqj2y", "template_j5239qf", helpsData, "CHXzzT2yBcDushZvC").then(
             (result) => {
                 Swal.fire({
                     title: "Success!",
@@ -87,6 +88,19 @@ const NeedHelp = () => {
                 setPending(false);
             }
         );
+
+        (async () => {
+            const { data } = await axios.post(`https://rescue-me-server.vercel.app/help`, helpsData);
+            console.log(data);
+            if (data.status) {
+                Swal("The Message has been successfully Delivered.", {
+                    icon: "success",
+                    className: "rounded-xl",
+                });
+
+                e.target.reset();
+            }
+        })();
     };
 
     return (
