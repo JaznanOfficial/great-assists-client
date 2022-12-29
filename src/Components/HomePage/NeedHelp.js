@@ -12,6 +12,8 @@ const NeedHelp = () => {
     const [pic, setPic] = useState("");
     const [pending, setPending] = useState(false);
     const [isExploding, setIsExploding] = useState(false);
+    const { user, signInWithGoogle, phoneSignIn } = useFirebase();
+    // console.log(user);
 
     const imageUrlKey = "cbe11c66352b77ec50a7a98263be9fcd";
 
@@ -46,8 +48,21 @@ const NeedHelp = () => {
             subject: e.target.subject.value,
             image: pic,
             address: e.target.address.value,
-            message: e.target.message.value
+            message: e.target.message.value,
         };
+
+        phoneSignIn(data?.phone)
+            .then((confirmationResult) => {
+                // SMS sent. Prompt user to type the code from the message, then sign the
+                // user in with confirmationResult.confirm(code).
+                window.confirmationResult = confirmationResult;
+                // ...
+            })
+            .catch((error) => {
+                // Error; SMS not sent
+                // ...
+                console.log(error);
+            });
 
         emailjs.send("service_uteqj2y", "template_j5239qf", data, "CHXzzT2yBcDushZvC").then(
             (result) => {
@@ -73,9 +88,6 @@ const NeedHelp = () => {
             }
         );
     };
-
-    const { user,signInWithGoogle } = useFirebase();
-    // console.log(user);
 
     return (
         <>
@@ -104,7 +116,7 @@ const NeedHelp = () => {
                                 <form class="mt-6" ref={form} onSubmit={sendEmail}>
                                     <div class="flex-1">
                                         <input
-                                            required
+                                            // required
                                             name="name"
                                             type="text"
                                             placeholder="Name"
@@ -114,7 +126,7 @@ const NeedHelp = () => {
 
                                     <div class="flex-1 mt-6">
                                         <input
-                                            required
+                                            // required
                                             name="email"
                                             type="email"
                                             defaultValue={user?.email}
@@ -134,7 +146,7 @@ const NeedHelp = () => {
                                     </div>
                                     <div class="flex-1 mt-6">
                                         <input
-                                            required
+                                            // required
                                             name="subject"
                                             type="text"
                                             placeholder="subject"
@@ -145,7 +157,7 @@ const NeedHelp = () => {
                                         {pic === "" ? (
                                             <div onChange={handlePicUpload} class="flex-1 mt-6">
                                                 <input
-                                                    required
+                                                    // required
                                                     name="image"
                                                     type="file"
                                                     placeholder="image"
@@ -167,7 +179,7 @@ const NeedHelp = () => {
 
                                     <div class="w-full mt-6">
                                         <textarea
-                                            required
+                                            // required
                                             name="address"
                                             class="block w-full h-16 px-5 resize-none py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md md:h-20 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-red-400 focus:ring-red-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
                                             placeholder="Enter Your Address"
@@ -175,7 +187,7 @@ const NeedHelp = () => {
                                     </div>
                                     <div class="w-full mt-6">
                                         <textarea
-                                            required
+                                            // required
                                             name="message"
                                             class="block w-full h-20 resize-none px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md md:h-24 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-red-400 focus:ring-red-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
                                             placeholder="Message"
@@ -193,7 +205,7 @@ const NeedHelp = () => {
                                     ) : (
                                         <button
                                             disabled={pending ? true : false}
-                                            onClick={()=>signInWithGoogle()}
+                                            onClick={() => signInWithGoogle()}
                                             class="w-full px-6 py-3 mt-6 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-red-600 rounded-md hover:bg-red-500 focus:outline-none focus:ring focus:ring-red-400 focus:ring-opacity-50"
                                         >
                                             Submit
